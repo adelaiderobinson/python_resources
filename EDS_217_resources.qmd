@@ -139,5 +139,5 @@ sorted_list = sorted(rand_list)
 ```
 
 ```{r}
-usethis::use_git()
+
 ```
