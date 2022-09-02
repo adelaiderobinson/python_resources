@@ -1,0 +1,143 @@
+---
+title: "EDS 217 Resources"
+format: html
+editor: visual
+---
+
+# The basics
+
+## Print
+
+```{python}
+#a very basic print statement
+print('This is a statement')
+
+#old method of formatting
+city = 'Santa Barbara'
+yrs = 0.5
+print( 'I have lived in %s for %f years.' % (city,yrs))
+#%s for string, %d for integer, and %f for float
+
+```
+
+## Input
+
+```{python}
+
+name = input( 'What is your first name? ' ) #converts any input to a string
+print( 'My name is ' + name + '.' )
+
+```
+
+# Variables and Operators
+
+## Boolean Operators
+
+return true or false
+
+```{python}
+# Define variables a, b, and c as floats.
+y = 1.0
+b = 42
+w = 23.782043
+x= 1
+
+print( b >= w )
+print( 87 < -2 )
+print( c != 0 )
+print( y == x)
+
+```
+
+## Strings
+
+```{python}
+#convert a number to a string
+y = 1
+ystr = str(y)
+type(ystr)
+
+s = 'isaac' + ' ' + 'newton' #combine two strings
+```
+
+# Lists and Indexing
+
+## Lists
+
+```{python}
+# Define list variables
+#can contain multiple data types, not recommended
+num_list = [4, 23, 654, 2, 0, -12, 4391]
+str_list = ['energy', 'water', 'carbon']
+print(num_list)
+# Find the length of num_list
+print(len(num_list))
+# Minimum value of num_list
+print(min(num_list))
+
+# Maximum value of num_list
+print(max(num_list))
+```
+
+## Indexing
+
+```{python}
+#use square brackets when indexing a list
+num_list[2]
+num_list[-2] #two from the end
+#slicing from num_list
+
+
+```
+
+## Slicing
+
+Accessing a range of values in a list is called slicing, this will output a new list
+
+```{python}
+print(num_list[2:6])
+#gives 2,3,4 & 5 (leaves out last number)
+#Python is 1 indexed going from the end
+# 0 indexed going from the start
+
+num_list[0:4:2]  #specify a step while slicing, every other
+num_list[::2] #from beginning to the end give me every other number 
+num_list[::-1] #step of -1 returns this list in reverse
+
+```
+
+## append and delete
+
+```{python}
+
+# add elements to a list through list.append
+colors = ['red', 'blue', 'green', 'black', 'white']
+colors.append('pink')
+colors.append('lavender')
+print(colors)
+#add an element in a specific position
+colors.insert(4, 'purple')
+# remove an element
+colors.remove('pink') #based on value
+#based on indices
+colors.pop(1) #removes the second element      
+del colors[2] #removes the third
+del colors[2:4]    # removes the third and fourth 
+
+```
+
+## Sort
+
+```{python}
+rand_list = [5.1 , 3.42 , 3.333 , 100.4 , 0.5 , 26.0 , 7.44 , 5.8 , 39.0]
+rand_list.sort()
+print(rand_list) #sorted numerically 
+rand_list.sort(reverse = True) # sorts in reverse
+
+#does not sort in place
+sorted_list = sorted(rand_list)
+```
+
+```{r}
+usethis::use_git()
+```
